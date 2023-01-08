@@ -1,12 +1,9 @@
 module.exports = {
-  eslintConfig: {
-    extends: ['react-app', 'react-app/jest'],
-  },
   env: {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['react-app', 'react-app/jest'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -15,5 +12,5 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  rules: { 'react/react-in-jsx-scope': 'off' },
 };
