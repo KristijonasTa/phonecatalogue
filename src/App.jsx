@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <div className="page_container">
         <Routes>
+          <Route path="/" element={<h1>Welcome to Phones catalogue page</h1>} />
           <Route path="/phones" element={<Phones />} />
           <Route path="/phones/:brand" element={<Brand />} />
           <Route path="*" element={<Error />} />
