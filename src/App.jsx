@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Brand from './pages/Brand';
 import Error from './pages/Error';
@@ -9,12 +9,14 @@ function App() {
   return (
     <div className="App">
       <div className="page_container">
-        <Routes>
-          <Route path="/" element={<h1>Welcome to Phones catalogue page</h1>} />
-          <Route path="/phones" element={<Phones />} />
-          <Route path="/phones/:brand" element={<Brand />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Navigate to="/phones" />} />
+            <Route path="/phones" element={<Phones />} />
+            <Route path="/phones/:brand" element={<Brand />} />
+            <Route path="/error" element={<Error />} />
+          </Routes>
+        </Router>
       </div>
     </div>
   );
