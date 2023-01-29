@@ -11,9 +11,9 @@
   &__link {
     text-decoration: none;
     color: $white;
-  }
 
-  &__link:hover {
-    color: $light-green;
+    &:hover {
+      color: $light-green;
+    }
   }
 }
