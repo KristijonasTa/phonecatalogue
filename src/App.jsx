@@ -11,14 +11,14 @@ function App() {
     <>
       <Router>
         <Header />
-        <div className="page_container">
+        <main className="page-wrapper">
           <Routes>
             <Route path="/" element={<Navigate to="/phones" />} />
             <Route path="/phones" element={<Phones />} />
             <Route path="/phones/:brand" element={<Brand />} />
             <Route path="/error" element={<Error />} />
           </Routes>
-        </div>
+        </main>
       </Router>
     </>
   );
