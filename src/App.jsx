@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.scss';
+import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Brand from './pages/Brand';
 import Error from './pages/Error';
@@ -19,6 +20,7 @@ function App() {
             <Route path="/error" element={<Error />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
     </>
   );
