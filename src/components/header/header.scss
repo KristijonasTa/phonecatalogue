@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-grey;
+  width: 100%;
+  height: $header-height;
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+      color: $light-green;
+    }
+  }
+}
