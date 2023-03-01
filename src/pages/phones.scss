@@ -1,0 +1,41 @@
+@import '../variables.scss';
+
+.ul-style {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 32px;
+}
+
+.link-to-brands {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: $dark-grey;
+
+  &:hover {
+    background-color: $light-green;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ul-style {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 80px 0 80px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .ul-style {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5px calc((100% - (200px * 6)) / 3);
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './phones.scss';
 
 const Phones = () => {
   const [brands, setBrands] = useState([]);
@@ -23,9 +24,9 @@ const Phones = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className="ul-style">
       {brands.map((phone) => (
-        <li key={phone.displayName}>
+        <li className="li-items" key={phone.displayName}>
           <Link className="link-to-brands" to={`/phones/${phone.id.toLowerCase()}`}>
             {phone.displayName}
             <img src={phone.displayImageUrl} alt="" />
