@@ -27,7 +27,7 @@ const Phones = () => {
       {brands.map((phone) => (
         <li key={phone.displayName}>
           <Link className="brands-list__link" to={`/phones/${phone.id.toLowerCase()}`}>
-            {phone.displayName}
+            <h2 className="brands-list__link-heading">{phone.displayName}</h2>
             <img src={phone.displayImageUrl} alt={phone.displayName + ' phone'} />
           </Link>
         </li>
