@@ -14,22 +14,21 @@ const Phones = () => {
           'https://raw.githubusercontent.com/TGSL-DC/frontend-interview-api/master/brands.json'
         );
         const jsonData = await response.json();
-        console.log(jsonData.options);
         setBrands(jsonData.options);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
     fetchPhones();
   }, []);
 
   return (
-    <ul className="ul-style">
+    <ul className="brands-list">
       {brands.map((phone) => (
-        <li className="li-items" key={phone.displayName}>
-          <Link className="link-to-brands" to={`/phones/${phone.id.toLowerCase()}`}>
+        <li key={phone.displayName}>
+          <Link className="brands-list__link" to={`/phones/${phone.id.toLowerCase()}`}>
             {phone.displayName}
-            <img src={phone.displayImageUrl} alt="" />
+            <img src={phone.displayImageUrl} alt={phone.displayName + ' phone'} />
           </Link>
         </li>
       ))}

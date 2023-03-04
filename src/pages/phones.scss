@@ -1,42 +1,35 @@
 @import '../variables.scss';
+$phone-width: 300px;
 
-.ul-style {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.brands-list {
+  display: grid;
+  grid-template-columns: $phone-width;
   padding: 20px;
   gap: 32px;
-}
 
-.link-to-brands {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  text-decoration: none;
-  border-radius: 15px;
-  color: $dark-grey;
-
-  &:hover {
-    background-color: $light-green;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, $phone-width);
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .ul-style {
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 0 80px 0 80px;
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, $phone-width);
   }
-}
 
-@media screen and (min-width: 1300px) {
-  .ul-style {
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 5px calc((100% - (200px * 6)) / 3);
+  @media screen and (min-width: 1400px) {
+    grid-template-columns: repeat(4, $phone-width);
+  }
+
+  &__link {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 15px;
+    color: $dark-grey;
+
+    &:hover {
+      background-color: $light-green;
+    }
   }
 }
