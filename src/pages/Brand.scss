@@ -1,0 +1,96 @@
+@import '../variables.scss';
+
+.brand-list {
+  @extend %display-phones;
+}
+
+.information-about-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 10px;
+
+  &__color-wrapper {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+  }
+  &__color {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50px;
+  }
+
+  &__memory {
+    display: flex;
+    gap: 10px;
+
+    &__gb {
+      display: flex;
+      background-color: $light-grey;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      width: 60px;
+      height: 40px;
+      border: 1px solid black;
+      border-radius: 50px;
+    }
+  }
+
+  &__dual-SIM-wrapper__dual-SIM {
+    display: flex;
+    background-color: $light-grey;
+    align-items: center;
+    font-size: 15px;
+    width: 60px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50px;
+  }
+
+  &__network {
+    display: flex;
+    gap: 10px;
+    &__span {
+      display: flex;
+      background-color: $light-grey;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      width: 60px;
+      height: 40px;
+      border: 1px solid black;
+      border-radius: 50px;
+    }
+  }
+
+  &__add-button {
+    background-color: $dark-green;
+    border: none;
+    color: $white;
+    text-shadow: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+  &__remove-button {
+    background-color: $dark-red;
+    border: none;
+    color: $white;
+    text-shadow: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    &:hover {
+      background-color: $red;
+    }
+  }
+}
