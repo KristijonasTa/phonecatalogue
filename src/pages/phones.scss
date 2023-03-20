@@ -1,24 +1,9 @@
 @import '../variables.scss';
 
-$phone-width: 300px;
-
 .brands-list {
-  display: grid;
-  grid-template-columns: $phone-width;
   padding: 2rem;
-  gap: 3.2rem;
 
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, $phone-width);
-  }
-
-  @media screen and (min-width: 1200px) {
-    grid-template-columns: repeat(3, $phone-width);
-  }
-
-  @media screen and (min-width: 1400px) {
-    grid-template-columns: repeat(4, $phone-width);
-  }
+  @extend %display-phones;
 
   &__link {
     display: flex;

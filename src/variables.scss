@@ -1,6 +1,30 @@
 $dark-grey: #3c3a3a;
 $white: white;
-$light-green: #40ba52;
+$light-green: #a8f597;
 $light-grey: #eeeded;
+$dark-green: #186e30;
+$green: #2ea44f;
+$dark-red: #c70021;
+$red: #d52b2b;
+
+$phone-width: 300px;
 
 $header-footer-height: 5rem;
+
+%display-phones {
+  display: grid;
+  grid-template-columns: $phone-width;
+  gap: 3.2rem;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, $phone-width);
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, $phone-width);
+  }
+
+  @media screen and (min-width: 1400px) {
+    grid-template-columns: repeat(4, $phone-width);
+  }
+}
